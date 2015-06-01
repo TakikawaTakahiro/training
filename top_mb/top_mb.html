@@ -5,109 +5,163 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>東京のグルメ・クーポン/ネット予約ならホットペッパーグルメ</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div class="row" style="background-color:red;">
-			<div class="col-xs-8">
-				<a href=""><img src="img/logo_renewal.png" alt="ホットペッパー HOTPEPPER グルメ" weidth="145px" height="34px"></a>
+	<div class="headerbelt">
+		<div class="headerlogo">
+				<a href=""><img src="img/logo_renewal.png" alt="ホットペッパー HOTPEPPER グルメ" weidth="180px" height="35px"></a>
+		</div>
+		<div class="headernavi">
+			<ul>
+				<li><a href="" class="headerlogin"><img src="img/icn_info_01.png" alt=""  width="18px" height="18px"><div>お知らせ</div></a></li>
+				<li><a href="" class="headerinfo"><img src="img/icn_login_01.png" alt="" width="18px" height="18px"><div>ログイン</div></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="recruitpoint">
+		<div class="recruitpoint-username"><p><span>ゲスト</span><small>さん</small></p></div>
+		<div class="recruitpoint-show"><img src="img/icn_recruitpoint.png" alt="リクルートポイント"　weidth="127px" height="15px"><span>を表示する</span><i class="glyphicon glyphicon-chevron-right"></i></div>
+	</div>
+
+
+	<div id="main">
+		<div class="topsearch">
+			<div class="searchtitle">
+				<h1><img src="img/icn_hotpepper_01.png" alt="" width="25px" height="26px">東京の飲食店　予約・クーポン</h1>
+				<p class="searchbtn-area"><a href="" type="button" class="btn btn-default">都道府県選択</a></p>
 			</div>
-			<div class="col-xs-2"><img src="img/icn_info_01.png" alt="" height="20px"><p>お知らせ</p></div>
-			<div class="col-xs-2"><img src="img/icn_login_01.png" alt="" height="20px"><p>ログイン</p></div>
 		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4"><p><span class="recruitpoint-username">ゲスト</span><small>さん</small></p></div>
-			<div class="col-xs-8"><img src="img/icn_recruitpoint.png" alt="リクルートポイント"　weidth="145px" height="15px"><span>を表示する</span></div>
+
+
+		<div class="">
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only control-label" for="free-word-search">フリーワードで探す</label>
+					<input type="text" id="free-word-search" class="form-control" placeholder="フリーワードで探す">
+				</div>
+				<div class="form-group">
+					<input type="submit" value="検索" class="btn btn-primary">
+				</div>
+			</form>
 		</div>
-	</div>
-		<div class="container">
-		<div class="row" style="background-color:#dadada;">
-			<div class="col-xs-1"><img src="img/icn_hotpepper_01.png" alt=""></div>
-			<div class="col-xs-8"><h1>東京の飲食店　予約・クーポン</h1></div>
-			<div class="col-xs-3"><a href="" type="button" class="btn btn-default">都道府県選択</a></div>
-		</div>
-	</div>
-	<div class="container">
-		<form class="form-inline">
-			<div class="form-group">
-				<label class="sr-only control-label" for="free-word-search">フリーワードで探す</label>
-				<input type="text" id="free-word-search" class="form-control" placeholder="フリーワードで探す">
+		<div class="">
+			<div class="">
+				<div class=""><img src="img/icn_top_search_area.png" height="37px"><p><span>日付</span><br>から探す</p></div>
+				<div class=""><img src="img/icn_top_search_date.png" height="37px"><p><span>エリア</span><br>から探す</p></div>
+				<div class=""><img src="img/icn_top_search_location.png" height="37px"><p><span>現在地</span><br>から探す</p></div>
 			</div>
-			<div class="form-group">
-				<input type="submit" value="検索" class="btn btn-primary">
+		</div>
+		<div>
+			<img src="img/icn_check_01.png" alt=""><p>かんたん予約</p>
+			<ul>
+				<li><a href="">今日行ける</a></li>
+				<li><a href="">明日行ける</a></li>
+				<li><a href="">金曜行ける</a></li>
+			</ul>
+		</div>
+
+
+
+
+		<div>
+			<img src="img/icn_list_01.png" alt=""><h2>おすすめの特集</h2>
+			<ul>
+				<li><a href="">宴会</a></li>
+				<li><a href="">女子会</a></li>
+				<li><a href="">食べ放題</a></li>
+				<li><a href="">誕生日・記念日</a></li>
+				<li><a href="">ポイント3倍</a></li>
+				<li><a href="">対象コースポイント5倍</a></li>
+				<li><a href="">結婚式二次会＆貸切パーティー</a></li>
+				<li><a href="">プレミアム</a></li>
+				<li><a href="">いまからお得なクーポン</a></li>
+				<li><a href="">カラオケ検索</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<ul>
+				<li><a href="">幹事さん特典があるお店</a></li>
+				<li><a href="">NEWOPEN・リニューアルOPEN・新登場</a></li>
+				<li><a href="">夏を先取り！ビアガーデン・ビアホール</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<img src="img/icn_hotpepper_01.png" alt=""><h2>テーマ・シーン別グルメ特集</h2>
+			<ul>
+				<li><a href=""><img src="">飲み放題付きコース</a></li>
+				<li><a href=""><img src="">人気のコース</a></li>
+				<li><a href=""><img src="">定番人気</a></li>
+				<li><a href=""><img src="">こだわり食材</a></li>
+				<li><a href=""><img src="">大人なグルメ</a></li>
+				<li><a href=""><img src="">デートにぴったり</a></li>
+				<li><a href=""><img src="">旬の料理を楽しむ</a></li>
+				<li><a href=""><img src="">季節のイベント</a></li>
+				<li><a href=""><img src="">女性に嬉しい</a></li>
+				<li><a href=""><img src="">ママにも優しい</a></li>
+				<li><a href=""><img src="">ランチを楽しむ</a></li>
+				<li><a href=""><img src="">個室・貸切・設備で探す</a></li>
+				<li><a href=""><img src="">特別シーンなら</a></li>
+			</ul>
+		</div>
+
+		<div class="netyoyaku">
+			<img src="img/icn_hotpepper_01.png" alt=""><h2>ネット予約できるお店</h2><span>ポイント貯まる</span>
+			<ul>
+				<li><a href="">ネット予約できるお店を探す</a></li>
+				<li><a href="">即予約できるお店だけ探す</a></li>
+			</ul>
+		</div>
+
+		<div>
+			<img src="img/icn_hotpepper_01.png" alt=""><h2>ホットペッパーお食事券</h2>
+			<div>
+				<div class="btn btn-default">さっそく予約する</div>
+				<div class="btn btn-default">使い方はこちら</div>
 			</div>
-		</form>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4"><img src="img/icn_top_search_area.png" height="37px"><p><span>日付</span><br>から探す</p></div>
-			<div class="col-xs-4"><img src="img/icn_top_search_date.png" height="37px"><p><span>エリア</span><br>から探す</p></div>
-			<div class="col-xs-4"><img src="img/icn_top_search_location.png" height="37px"><p><span>現在地</span><br>から探す</p></div>
 		</div>
-	</div>
-	<div>
-		<img src="img/icn_check_01.png" alt=""><p>かんたん予約</p>
-	</div>
 
+		<div class="helptool">
+			<img src="img/icn_hotpepper_01.png" alt=""><h2>幹事さんお助けツール</h2>
+			<div>
+				<div class="kanjikun"><img src="img/bnr_kanji.png" alt="スマート幹事くん" width="270" height="68"></div>
+				<div class="btn btn-default">さっそく予約する</div>
+				<div class="btn btn-default">使い方はこちら</div>
+			</div>
+		</div>
 
+		<div class="tokyo-linklist">
+			<h2>条件を指定して東京のお店を探す</h2>
+			<ul>
+				<li><a href="">エリアから探す</a></li>
+				<li><a href="">駅から探す</a></li>
+				<li><a href="">ジャンルから探す</a></li>
+				<li><a href="">こだわりから探す</a></li>
+				<li><a href="">料理から探す</a></li>
+				<li><a href="">クーポンから探す</a></li>
+			</ul>
+		</div>
 
-	<div class="netyoyaku">
-		<img src="img/icn_hotpepper_01.png" alt=""><h2>ネット予約できるお店</h2><span>ポイント貯まる</span>
-		<ul>
-			<li><a href="">ネット予約できるお店を探す</a></li>
-			<li><a href="">即予約できるお店だけ探す</a></li>
-		</ul>
-	</div>
+		<div class="linklist">
+			<h2>条件を変更してお店を探す</h2>
+			<ul>
+				<li><a href="">チェーン店から探す</a></li>
+				<li><a href="">ランチのあるお店から探す</a></li>
+			</ul>
+		</div>
 
-	<div>
-		<img src="img/icn_hotpepper_01.png" alt=""><h2>ホットペッパーお食事券</h2>
 		<div>
-			<div class="btn btn-default">さっそく予約する</div>
-			<div class="btn btn-default">使い方はこちら</div>
+			<div>
+				<p>リクルートIDでログインできます</p>
+				<div class="btn btn-default">ログイン</div>
+				<p>リクルートIDをお持ちでない方は</p>
+				<div class="btn btn-default">今すぐ会員登録（無料）！</div>
+			</div>
 		</div>
 	</div>
-
-	<div class="helptool">
-		<img src="img/icn_hotpepper_01.png" alt=""><h2>幹事さんお助けツール</h2>
-		<div>
-			<div class="kanjikun"><img src="img/bnr_kanji.png" alt="スマート幹事くん" width="270" height="68"></div>
-			<div class="btn btn-default">さっそく予約する</div>
-			<div class="btn btn-default">使い方はこちら</div>
-		</div>
-	</div>
-
-	<div class="tokyo-linklist">
-		<h2>条件を指定して東京のお店を探す</h2>
-		<ul>
-			<li><a href="">エリアから探す</a></li>
-			<li><a href="">駅から探す</a></li>
-			<li><a href="">ジャンルから探す</a></li>
-			<li><a href="">こだわりから探す</a></li>
-			<li><a href="">料理から探す</a></li>
-			<li><a href="">クーポンから探す</a></li>
-		</ul>
-	</div>
-
-	<div class="linklist">
-		<h2>条件を変更してお店を探す</h2>
-		<ul>
-			<li><a href="">チェーン店から探す</a></li>
-			<li><a href="">ランチのあるお店から探す</a></li>
-		</ul>
-	</div>
-
-	<div>
-		<div>
-			<p>リクルートIDでログインできます</p>
-			<div class="btn btn-default">ログイン</div>
-			<p>リクルートIDをお持ちでない方は</p>
-			<div class="btn btn-default">今すぐ会員登録（無料）！</div>
-		</div>
-	</div>
-
 	<div id="footer" style="background-color:#dadada;">
 		<ul style="background:#ffffff;">
 			<li><a href="">予約ならホットペッパーグルメ</a></li>
