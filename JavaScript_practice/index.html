@@ -8,32 +8,19 @@
 
 <body>
 	<script>
-		/*
-			オブジェクト
-			　名前と値がグループ化されてる
-		var user = {
-			email: "mojimoji@gmail.com", //それぞれのペアのことをプロパティ、名前をプロパティ名という
-			score: 80　//プロパティ名は""で囲ってもいいが、囲わない方が多いよ
-		};
-		console.log(user["email"]);
-		console.log(user.email); //これはどっちでもいいよ
+	/*
+		組み込みオブジェクトについて
 
-		user.score = 100; //もちろん書き換えることもできるよ
-		console.log(user);
-		*/
-		var user = {
-			email: "mojimoji@gmail.com", 
-			score: 80,
-			greet: function(name) { //オブジェクトのプロパティの値に関数が来た場合、オブジェクトのメソッドという
-				console.log("hallo, " + name + " from " + this.email); //メソッド内で使える　this　は、今自分がいるオブジェクトを参照することができる
-			}
-		};
-		//console.log(user["email"]);
-		//console.log(user.email); 
-		//user.score = 100; 
-		//console.log(user);
-		user.greet("Tom");
-
+		・String / 文字列
+		・Array / 配列
+		・Math / 数学
+		・Date / 日付
+	*/
+	// var s = new String("mojimoji"); 実はStringオブジェクトを使わなくても同じ結果が返ってくるよ
+	var s = "mojimoji"; // 文字列リテラルといって、この文字列リテラルにメソッドやプロパティをつけるとJSの方で文字列オブジェクトに変換してくれるよ
+	console.log(s.length); //文字数を返してくれるよ
+	console.log(s.replace("m", "M")); //置換するよ　この場合は小文字を大文字に
+	console.log(s.substr(1, 4)); //部分的に文字列を返してくれるよ
 	</script>
 </body>
 </html>
