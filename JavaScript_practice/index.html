@@ -9,22 +9,31 @@
 <body>
 	<script>
 		/*
-			配列について：グループ化されたデータ
-			var score_1 = 100, score_2 = 200;  でも動くけど、まとめた方がいいよね。
-		*/
-		/*
-		var score = [100, 300, 500, "mojimoji"]; //数字だけじゃなくて文字も入れられるよ
-		console.log(score[0]); //添字　０から始まる
-		score[2] = 400;
-		console.log(score); 
-		*/
-		//配列の中に配列を入れることもできるよ
+			オブジェクト
+			　名前と値がグループ化されてる
+		var user = {
+			email: "mojimoji@gmail.com", //それぞれのペアのことをプロパティ、名前をプロパティ名という
+			score: 80　//プロパティ名は""で囲ってもいいが、囲わない方が多いよ
+		};
+		console.log(user["email"]);
+		console.log(user.email); //これはどっちでもいいよ
 
-		var m = [
-			[1, 2, 3],
-			[4, 5, 6]
-		];
-		console.log(m[1][2]); // mの中の　[1]、2番目の配列の　[2]、3番目の数字を表示なので６が出るよ
+		user.score = 100; //もちろん書き換えることもできるよ
+		console.log(user);
+		*/
+		var user = {
+			email: "mojimoji@gmail.com", 
+			score: 80,
+			greet: function(name) { //オブジェクトのプロパティの値に関数が来た場合、オブジェクトのメソッドという
+				console.log("hallo, " + name + " from " + this.email); //メソッド内で使える　this　は、今自分がいるオブジェクトを参照することができる
+			}
+		};
+		//console.log(user["email"]);
+		//console.log(user.email); 
+		//user.score = 100; 
+		//console.log(user);
+		user.greet("Tom");
+
 	</script>
 </body>
 </html>
