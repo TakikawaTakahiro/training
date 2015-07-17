@@ -8,73 +8,23 @@
 
 <body>
 	<script>
-	/*
-	条件分岐
-		if(条件){ 真 } else { 偽 }　こんな感じで書く
-	比較演算子
-	 > < より大きいより小さい
-	 >= <= 以上、以下ならばこっち
-	 === 同じだよ
-	 !==　同じじゃないよ
-	論理演算子：こういった条件を組み合わせて使いたい時
-		AND   &&
-		OR    ||
-		NOT    !
-		score > 60 && score < 80　←スコアが６０より大きく、かつ８０よりも小さい場合　といった条件を設定できる。
-		var score = 50;
-		if (score > 60) {
-			console.log("OK!");
-		} else if (score > 40 ) {
-			console.log("soso...");
-		} else {
-			console.log("NG!");
+		/*
+			ループ処理について
+			while / 実行判定が最初に行われるので、偽の場合何も表示されない　＝　処理されない
+			do..while / 判定が後に行われるので、偽の場合でも１回は処理が行われる
+		*/
+/*
+		var i = 0;
+		while (i < 10) {
+			console.log(i);
+			i++;
 		}
-	*/
-	/*
-		真偽値
-			文字列：空文字以外だったらtrue
-			数値：0 か　NaN(Not a Number)以外だったらtrue
-			true / false
-			object: null 以外だったらtrue、　undefined,null はfalse
-	if (x) {
-		//このxが文字列だった場合
-	}
-	if (x !== '') {
-		//この記述と同じことになる
-	}
-	三項演算子
-		var a,b,c;
-		if (条件) {
-			a = b;
-		} else {
-			a = c;
-		}
-		は、このように書き換えられる
-		a = (条件) ? b : c;
-	*/
-	/*
-		条件分岐
-		Switch
-	*/
-	var signal = "blue";
-
-	switch (signal) {
-		case "red":
-			console.log("stop");
-			break;
-		case "grewn":
-		case "blue":
-			console.log("GO!");
-			break;
-		case "yellow":
-			console.log("slow down");
-			break;
-		default:
-			console.log("wrong signal!");
-			break;
-	}
-
-
+*/
+		var i = 7;
+		do {
+			console.log(i);
+			i++;
+		} while (i < 10);
 	</script>
 </body>
 </html>
