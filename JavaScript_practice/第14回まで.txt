@@ -40,3 +40,20 @@ var hallo = function(name) { // 関数名は省略することができて、無
 var greet = hallo("Tom");
 console.log(greet);
 // console.log(msg); これはエラーになるよ
+
+/*
+	即時関数について
+	定義した関数を即実行したい場合、()で全体を囲いその後ろに()をつける。
+	(function hallo(name) {
+		console.log("hallo" + name);
+	})("tom");　呼び出してすぐに実行されるので関数名も省略可能
+*/
+//	(function(name) {
+//		console.log("hallo" + name);
+//	})("tom");
+// プログラムをローカル変数にする時にもよく使うよ
+	(function() {
+		var x = 10,
+　　　　　		y = 20;
+	console.log(x + y);
+	})();

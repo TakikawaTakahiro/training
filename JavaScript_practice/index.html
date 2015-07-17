@@ -8,23 +8,30 @@
 
 <body>
 	<script>
-	/*
-		即時関数について
-		定義した関数を即実行したい場合、()で全体を囲いその後ろに()をつける。
-		(function hallo(name) {
-			console.log("hallo" + name);
-		})("tom");　呼び出してすぐに実行されるので関数名も省略可能
-	*/
-	//	(function(name) {
-	//		console.log("hallo" + name);
-	//	})("tom");
-	// プログラムをローカル変数にする時にもよく使うよ
+		/*
+			タイマー処理について
+				setInterval / 一定時間ごとに処理を繰り返す *前の処理が終わったかの判定がないため、ブラウザクラッシュの危険性あり
+				setTimeout / 一定時間後に処理を1度だけ実行する *前の処理が終わってから次の判定に移る
+		var i = 0;
+		function show() {
+			console.log(i++);
+		}
+		setInterval(function() {
+			show();
+		}, 1000);
+		*/
+		var i = 0;
+		function show() {
+			console.log(i++);
+			var tid = setTimeout(function() {
+				show();
+			}, 1000);
+			if (i > 5) {
+				clearTimeout(tid);
+			}
+		}
+		show();
 
-		(function() {
-			var x = 10,
-					y = 20;
-			console.log(x + y);
-		})();
 	</script>
 </body>
 </html>
