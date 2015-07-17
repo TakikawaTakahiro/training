@@ -8,49 +8,23 @@
 
 <body>
 	<script>
-		/*
-			ユーザーに情報を提示したり、確認を求めたりする
-			alert / okボタンのついた小さなウィンドウが出るよ
-			confirm / ok キャンセルの選択肢がついたウィンドウが出るよ。返り値もあるよ
-			prompt / ユーザーから情報を受け取るために使うよ。返り値があるよ。第２引数をとることもできる
-		*/
-		// alert("hallo!");
-		// var answer = confirm("are you sure?");
-		// console.log(answer);
-		/*
-		if (confirm("本当に削除しますか？")){
-			// 削除処理を記述　とこんな感じで使うよ
-		}
-		var name = prompt("お名前は？","名無し");
-		console.log(name);
-		*/
-		/*
-			関数：複数の処理をまとめることができるよ
-			function 関数名(引数) {
-				ここに処理記述
-				return 返り値
-			}
-		function hallo(name) {
-			//console.log("hallo" + name);
-			return "hallo" + name;
-		}
-		var greet = hallo("Tom");
-		console.log(greet);
-		*/
-		//function hallo(name) {
-		// 	var msg = "hallo" + name; //　関数内で定義した変数はローカル変数と言って、その関数内でのみ有効。それ以外はエラーになる
-		//	return msg;
-		//}
-		// 関数はデータ型でもあるので、変数に入れることもできるよ
-		var hallo = function(name) { // 関数名は省略することができて、無名関数、匿名間ん数と呼ばれる
-		 	var msg = "hallo" + name;
-			return msg;
-		};
+	/*
+		即時関数について
+		定義した関数を即実行したい場合、()で全体を囲いその後ろに()をつける。
+		(function hallo(name) {
+			console.log("hallo" + name);
+		})("tom");　呼び出してすぐに実行されるので関数名も省略可能
+	*/
+	//	(function(name) {
+	//		console.log("hallo" + name);
+	//	})("tom");
+	// プログラムをローカル変数にする時にもよく使うよ
 
-		var greet = hallo("Tom");
-		console.log(greet);
-		// console.log(msg); これはエラーになるよ
-
+		(function() {
+			var x = 10,
+					y = 20;
+			console.log(x + y);
+		})();
 	</script>
 </body>
 </html>
