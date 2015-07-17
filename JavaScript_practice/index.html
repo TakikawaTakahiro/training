@@ -12,19 +12,34 @@
 			ループ処理について
 			while / 実行判定が最初に行われるので、偽の場合何も表示されない　＝　処理されない
 			do..while / 判定が後に行われるので、偽の場合でも１回は処理が行われる
-		*/
-/*
 		var i = 0;
 		while (i < 10) {
 			console.log(i);
 			i++;
 		}
-*/
+
 		var i = 7;
 		do {
 			console.log(i);
 			i++;
 		} while (i < 10);
+
+		 ループ処理
+		 for
+
+		 braek / ループ処理を抜ける
+		 continue / ループ処理を１回だけ抜ける
+		*/
+
+		for (var i = 0; i < 10; i++) {
+			if (i === 5) {
+				// break;
+				continue;
+			}
+			console.log(i);
+		}
+
+
 	</script>
 </body>
 </html>
