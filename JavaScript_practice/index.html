@@ -9,29 +9,22 @@
 <body>
 	<script>
 		/*
-			タイマー処理について
-				setInterval / 一定時間ごとに処理を繰り返す *前の処理が終わったかの判定がないため、ブラウザクラッシュの危険性あり
-				setTimeout / 一定時間後に処理を1度だけ実行する *前の処理が終わってから次の判定に移る
-		var i = 0;
-		function show() {
-			console.log(i++);
-		}
-		setInterval(function() {
-			show();
-		}, 1000);
+			配列について：グループ化されたデータ
+			var score_1 = 100, score_2 = 200;  でも動くけど、まとめた方がいいよね。
 		*/
-		var i = 0;
-		function show() {
-			console.log(i++);
-			var tid = setTimeout(function() {
-				show();
-			}, 1000);
-			if (i > 5) {
-				clearTimeout(tid);
-			}
-		}
-		show();
+		/*
+		var score = [100, 300, 500, "mojimoji"]; //数字だけじゃなくて文字も入れられるよ
+		console.log(score[0]); //添字　０から始まる
+		score[2] = 400;
+		console.log(score); 
+		*/
+		//配列の中に配列を入れることもできるよ
 
+		var m = [
+			[1, 2, 3],
+			[4, 5, 6]
+		];
+		console.log(m[1][2]); // mの中の　[1]、2番目の配列の　[2]、3番目の数字を表示なので６が出るよ
 	</script>
 </body>
 </html>

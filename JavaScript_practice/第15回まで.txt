@@ -57,3 +57,28 @@ console.log(greet);
 　　　　　		y = 20;
 	console.log(x + y);
 	})();
+
+
+/*
+			タイマー処理について
+				setInterval / 一定時間ごとに処理を繰り返す *前の処理が終わったかの判定がないため、ブラウザクラッシュの危険性あり
+				setTimeout / 一定時間後に処理を1度だけ実行する *前の処理が終わってから次の判定に移る
+		var i = 0;
+		function show() {
+			console.log(i++);
+		}
+		setInterval(function() {
+			show();
+		}, 1000);
+		*/
+		var i = 0;
+		function show() {
+			console.log(i++);
+			var tid = setTimeout(function() {
+				show();
+			}, 1000);
+			if (i > 5) {
+				clearTimeout(tid);
+			}
+		}
+		show();
