@@ -21,9 +21,22 @@
 		if (confirm("本当に削除しますか？")){
 			// 削除処理を記述　とこんな感じで使うよ
 		}
-		*/
 		var name = prompt("お名前は？","名無し");
 		console.log(name);
+		*/
+		/*
+			関数：複数の処理をまとめることができるよ
+			function 関数名(引数) {
+				ここに処理記述
+				return 返り値
+			}
+		*/
+		function hallo(name) {
+			//console.log("hallo" + name);
+			return "hallo" + name;
+		}
+		var greet = hallo("Tom");
+		console.log(greet);
 
 	</script>
 </body>
