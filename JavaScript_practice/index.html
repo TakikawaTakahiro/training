@@ -36,15 +36,12 @@
 			数値：0 か　NaN(Not a Number)以外だったらtrue
 			true / false
 			object: null 以外だったらtrue、　undefined,null はfalse
-	*/
 	if (x) {
 		//このxが文字列だった場合
 	}
 	if (x !== '') {
 		//この記述と同じことになる
 	}
-
-	/*
 	三項演算子
 		var a,b,c;
 		if (条件) {
@@ -54,8 +51,29 @@
 		}
 		は、このように書き換えられる
 		a = (条件) ? b : c;
-
 	*/
+	/*
+		条件分岐
+		Switch
+	*/
+	var signal = "blue";
+
+	switch (signal) {
+		case "red":
+			console.log("stop");
+			break;
+		case "grewn":
+		case "blue":
+			console.log("GO!");
+			break;
+		case "yellow":
+			console.log("slow down");
+			break;
+		default:
+			console.log("wrong signal!");
+			break;
+	}
+
 
 	</script>
 </body>
