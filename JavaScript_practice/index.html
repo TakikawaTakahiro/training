@@ -30,13 +30,26 @@
 				ここに処理記述
 				return 返り値
 			}
-		*/
 		function hallo(name) {
 			//console.log("hallo" + name);
 			return "hallo" + name;
 		}
 		var greet = hallo("Tom");
 		console.log(greet);
+		*/
+		//function hallo(name) {
+		// 	var msg = "hallo" + name; //　関数内で定義した変数はローカル変数と言って、その関数内でのみ有効。それ以外はエラーになる
+		//	return msg;
+		//}
+		// 関数はデータ型でもあるので、変数に入れることもできるよ
+		var hallo = function(name) { // 関数名は省略することができて、無名関数、匿名間ん数と呼ばれる
+		 	var msg = "hallo" + name;
+			return msg;
+		};
+
+		var greet = hallo("Tom");
+		console.log(greet);
+		// console.log(msg); これはエラーになるよ
 
 	</script>
 </body>
