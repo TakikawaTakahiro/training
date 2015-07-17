@@ -9,36 +9,21 @@
 <body>
 	<script>
 		/*
-			ループ処理について
-			while / 実行判定が最初に行われるので、偽の場合何も表示されない　＝　処理されない
-			do..while / 判定が後に行われるので、偽の場合でも１回は処理が行われる
-		var i = 0;
-		while (i < 10) {
-			console.log(i);
-			i++;
-		}
-
-		var i = 7;
-		do {
-			console.log(i);
-			i++;
-		} while (i < 10);
-
-		 ループ処理
-		 for
-
-		 braek / ループ処理を抜ける
-		 continue / ループ処理を１回だけ抜ける
+			ユーザーに情報を提示したり、確認を求めたりする
+			alert / okボタンのついた小さなウィンドウが出るよ
+			confirm / ok キャンセルの選択肢がついたウィンドウが出るよ。返り値もあるよ
+			prompt / ユーザーから情報を受け取るために使うよ。返り値があるよ。第２引数をとることもできる
 		*/
-
-		for (var i = 0; i < 10; i++) {
-			if (i === 5) {
-				// break;
-				continue;
-			}
-			console.log(i);
+		// alert("hallo!");
+		// var answer = confirm("are you sure?");
+		// console.log(answer);
+		/*
+		if (confirm("本当に削除しますか？")){
+			// 削除処理を記述　とこんな感じで使うよ
 		}
-
+		*/
+		var name = prompt("お名前は？","名無し");
+		console.log(name);
 
 	</script>
 </body>
