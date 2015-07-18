@@ -15,6 +15,7 @@
 <body>
 	<h1>見出し</h1>
 	<p id="msg">こんちわ！</p>
+	<button id="add">Click!</button>
 	<script>
 	/*
 	DOMとは？　document object model
@@ -34,9 +35,11 @@
 		p
 			text　という形にしてみるよ
 	*/
-	var greet = document.createElement('p'),
+	document.getElementById('add').addEventListener('click', function(){
+		var greet = document.createElement('p'),
 			text = document.createTextNode('hallo world');
-	document.body.appendChild(greet).appendChild(text);
+		document.body.appendChild(greet).appendChild(text);
+	});
 
 	</script>
 </body>
