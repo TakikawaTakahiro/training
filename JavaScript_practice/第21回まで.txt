@@ -1,0 +1,86 @@
+		/*
+			配列について：グループ化されたデータ
+			var score_1 = 100, score_2 = 200;  でも動くけど、まとめた方がいいよね。
+		*/
+		/*
+		var score = [100, 300, 500, "mojimoji"]; //数字だけじゃなくて文字も入れられるよ
+		console.log(score[0]); //添字　０から始まる
+		score[2] = 400;
+		console.log(score); 
+		*/
+		//配列の中に配列を入れることもできるよ
+
+		var m = [
+			[1, 2, 3],
+			[4, 5, 6]
+		];
+		console.log(m[1][2]); // mの中の　[1]、2番目の配列の　[2]、3番目の数字を表示なので６が出るよ
+
+
+		/*
+			オブジェクト
+			　名前と値がグループ化されてる
+		var user = {
+			email: "mojimoji@gmail.com", //それぞれのペアのことをプロパティ、名前をプロパティ名という
+			score: 80　//プロパティ名は""で囲ってもいいが、囲わない方が多いよ
+		};
+		console.log(user["email"]);
+		console.log(user.email); //これはどっちでもいいよ
+
+		user.score = 100; //もちろん書き換えることもできるよ
+		console.log(user);
+		*/
+		var user = {
+			email: "mojimoji@gmail.com", 
+			score: 80,
+			greet: function(name) { //オブジェクトのプロパティの値に関数が来た場合、オブジェクトのメソッドという
+				console.log("hallo, " + name + " from " + this.email); //メソッド内で使える　this　は、今自分がいるオブジェクトを参照することができる
+			}
+		};
+		//console.log(user["email"]);
+		//console.log(user.email); 
+		//user.score = 100; 
+		//console.log(user);
+		user.greet("Tom");
+
+
+
+
+	/*
+		組み込みオブジェクトについて
+
+		・String / 文字列
+		・Array / 配列
+		・Math / 数学
+		・Date / 日付
+	// var s = new String("mojimoji"); 実はStringオブジェクトを使わなくても同じ結果が返ってくるよ
+	var s = "mojimoji"; // 文字列リテラルといって、この文字列リテラルにメソッドやプロパティをつけるとJSの方で文字列オブジェクトに変換してくれるよ
+	console.log(s.length); //文字数を返してくれるよ
+	console.log(s.replace("m", "M")); //置換するよ　この場合は小文字を大文字に
+	console.log(s.substr(1, 4)); //部分的に文字列を返してくれるよ
+
+	var a = new Array(100, 300, 200);
+	// var a = [100, 300, 500]; もちろんこのように省略して書ける
+	console.log(a.length);
+	// unshift / arrayの先頭に要素を追加するよ
+	// push / 同じく末尾に追加するよ
+	// shift / arrayの先頭から要素を除去するよ
+	// pop / 同じく末尾から除去するよ
+	// splice / 指定した場所に要素を追加したり除去したりするよ
+	a.push(500);
+	console.log(a);
+	a.splice(1, 2, 800, 1000);
+	console.log(a);
+	*/
+	console.log(Math.PI); //円周率を表示　他のオブジェクトと違って、newする必要はないよ
+	console.log(Math.ceil(5.3)); //切り上げをしてくれるよ
+	console.log(Math.floor(5.3)); //切り捨てをしてくれるよ
+	console.log(Math.round(5.3)); //四捨五入してくれるよ
+	console.log(Math.random()); //０から１未満の実数を呼び出すたびに生成してくれるよ
+
+	var d = new Date(); //現在時刻のオブジェクトを取得できるよ
+	//var d = new Date(2015, 1, 11, 20, 30, 40);
+	//指定日時を崇徳できるよ　！注意！JSでは月のみ0から始まるので、２月と指定したい場合は「1」としなければダメだよ 
+	console.log(d.getFullYear()); //年を取得できるよ
+	console.log(d.getMonth()); //月を取得できるよ　こちらも月なので０から始まるよ
+	console.log(d.getTime()); //基準日(１９７０年１月１日)からの経過ミリ秒を取得できるよ　日付計算とかをするときは使いかもしれないね
