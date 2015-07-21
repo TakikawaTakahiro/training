@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>ジャンケンしようぜ</title>
+<meta charset="utf-8">
+<script type="text/javascript" src="js/judgement.js"></script>
+<script type="text/javascript">
+var strMsg0 = "じゃんけんしようぜ！";
+//いいえはボタンを無効化
+function init() {
+	if(!confirm(strMsg0)){
+		document.getElementById("btnG").disabled = true;
+		document.getElementById("btnC").disabled = true;
+		document.getElementById("btnP").disabled = true;
+	}
+}
+//結果
+function myChoice(jankenUsr) {
+	var strLocal = myResult(jankenUsr)
+	alert(strLocal);
+}
+</script>
+</head>
+<body onload="init()">
+<form name="form1">
+	<input type="button" id="btnG" onclick="myChoice(0)" value="グー">
+	<input type="button" id="btnC" onclick="myChoice(1)" value="チョキ">
+	<input type="button" id="btnP" onclick="myChoice(2)" value="パー">
+</form>
+</body>
+</html>
