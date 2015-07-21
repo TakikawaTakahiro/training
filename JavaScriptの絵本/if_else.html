@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	s = 99;
+	document.write("あなたの点数は", s, "点です。<br>");
+	if (0 <= s && s <= 50) {
+		document.write("平均点まであと", (70 - s), "点！<br>");
+		document.write("ちょっと点数低くない？もっと頑張ろう！<br>");
+	} else if (51 <= s && s <= 69) {
+		document.write("平均点まであと", (70 - s), "点！<br>");
+		document.write("もうちょっと！おしいね<br>");
+	} else if (70 <= s && s <= 100) {
+		if (s == 100) {
+			document.write("満点！やったねすごいね<br>");	
+		} else {
+		document.write("平均点超えました！いえーい<br>");
+		}
+	} else {
+		document.write("エラー！どゆこと？<br>");
+	}
+
+	b = 1;
+	for (a = 0; a < 5; a++) {
+		if (b + a == 3)
+			continue;
+		document.write(b, "+", a, "=", b + a, "<br>");
+	}
+
+	b = 3;
+	for (a = 0; a < 5; a++) {
+		if (b - a == 0)
+			break;
+		document.write(b, "-", a, "=", b - a, "<br>");
+	}
+
+	for (j = 1; j <= 9; j++) {
+		document.write(j, "の位<br>");
+		for (i = 1; i <= 9; i++) {
+			document.write(j, "x", i, "=", j * i, "<br>");
+		}
+	}
+</script>
+</body>
+</html>
