@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>element</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script type="text/javascript">
+	function check() {
+		for(i = 0; i < document.form1.length; i++) {
+			if(document.form1.elements[i].value == ""){
+				alert("空欄は全て埋めてください");
+				return false;
+			}
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+<h1>各項目を入力してください</h1><br>
+<br>
+<form name="form1" action="/cgi-bin/magazine.cgi" method="get" onsubmit="return check()">
+	名前：<input type="text" name="name"><br>
+	住所：<input type="text" name="add" size="55"><br>
+	購読する：<input type="checkbox" name="evening" value="1"><br>
+	<br>
+	<input type="submit" value="送信"><br>
+	<input type="reset" value="リセット"><br>
+</form>
+
+<script type="text/javascript">
+/*
+mywin = window.open("https://www.google.co.jp/", "new", "menubar=1");
+var ques = confirm("?");
+document.writeln(ques);
+var yourname = prompt("お名前は？", "しおり");
+document.writeln(yourname);
+mytime = setTimeout("alert('5秒経過しました。')", 5000);
+
+document.open();
+document.writeln("ドメインは", document.domain);
+document.writeln("タイトルは", document.title);
+document.writeln("最終更新は", document.lastModified);
+document.close();
+*/
+</script>
+
+</body>
+</html>
