@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>配列</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	a = new Array();
+		a['dog'] = 'いぬ';
+		a['cat'] = 'ねこ';
+		delete a ['dog'];
+		console.log(a);
+
+	s = [1, 2, 3, 4, 5];
+	c = s.slice(1, 3); // 要素のn番目からn番目の直前までを切り出す
+	b = s.pop(); // 配列の末尾を取り除く
+	b = s.shift(); // 配列の先頭を取り除く
+	s.push(6); // 配列の末尾に追加
+	s.unshift(0); // 配列の先頭に追加
+		console.log(s,c);
+
+	str = "2015/07/22"
+	arr = str.split("/"); // 文字列を配列に変換
+	console.log(arr);
+
+	col = new Array();
+	col[0] = "red";
+	col[1] = "gren";
+	col[2] = "blue";
+	col[3] = "gray";
+	col[4] = "pink";
+	col[5] = "orange";
+	n = Math.floor(Math.random() * col.length);
+	document.bgColor = col[n];
+
+	day = new Date(2015, 1, 1, 0, 0, 0);
+	now = new Date();
+	time = now.getTime() - day.getTime();
+	days = Math.ceil(time / (24*60*60*1000));
+	document.write(days, "日");
+
+
+	
+</script>
+<h1>リロードすると背景色が変わるよ</h1>
+
+</body>
+</html>

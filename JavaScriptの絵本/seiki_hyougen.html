@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>正規表現</title>
+<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+str = "I like sushi and curry";
+reg = new RegExp("[a-z]{5}", "g"); //小文字アルファベットで５文字のパターンオブジェクト
+mat = str.match(reg);
+document.write(mat);
+
+str1 = "I like sushi.";
+rep = "pasta";
+reg = new RegExp("[a-z]{5}");
+str2 = str1.replace(reg, rep);
+document.write(str2); 
+</script>
+
+</body>
+</html>
