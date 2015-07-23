@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>おみくじ</title>
+	<style type="text/css">
+		body {
+			background: #555;
+			text-align: center;
+			font-size: 18px;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+		#result {
+			margin: 30px auto;
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			line-height: 180px;
+			font-size: 48px;
+			font-weight: bold;
+			background: #f44;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+		}
+		#btn {
+			margin: 0 auto;
+			width: 200px;
+			padding: 5px;
+			border-radius: 5px;
+			background: #0af;
+			box-shadow: 0 4px 0 #08c;
+			cursor: pointer;
+		}
+		#btn:hover {opacity: 0.8;}
+		#btn.pushed {
+			margin-top: 32px;
+			box-shadow: 0 2px 0 #08c;
+		}
+	</style>
+</head>
+<body>
+	<div id="result">？</div>
+	<div id="btn">今日の運勢は？</div>
+	<script type="text/javascript">
+		(function(){
+			"use strict";
+			document.getElementById("btn").addEventListener("click", function() {
+				var results = ["大吉", "中吉", "小吉", "吉", "末吉", "凶"];
+				var result = Math.floor(Math.random() * results.length);
+				document.getElementById("result").innerHTML = results[result];
+			});
+			document.getElementById("btn").addEventListener("mousedown", function(){
+				this.className = "pushed";
+			});
+			document.getElementById("btn").addEventListener("mouseup", function(){
+				this.className = "";
+			});
+		})();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
