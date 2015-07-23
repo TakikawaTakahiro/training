@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>5秒当てゲーム</title>
+	<style type="text/css">
+		body {
+			background: #555;
+			text-align: center;
+			font-size: 18px;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+		#result {
+			margin:50px auto; 
+			font-size: 48px;
+			font-weight: bold;
+			color: #0af;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+		}
+		#btn {
+			margin: 0 auto;
+			width: 200px;
+			padding: 7px;
+			border-radius: 5px;
+			background: #0af;
+			box-shadow: 0 4px 0 #08c;
+			cursor: pointer;
+		}
+		#btn:hover { opacity: 0.8; }
+		#btn.pushed {
+			margin-top: 52px;
+			box-shadow: 0 2px 0 #08c;
+		}
+	</style>
+</head>
+<body>
+	<div id="result"></div>
+	<div id="btn">START</div>
+	<script type="text/javascript">
+		(function() {
+			"use strict";
+			var isStarted = false;
+			var startTime;
+			var diff;
+			var msg = "Stop at 5 !";
+
+			var result = document.getElementById("result");
+			var btn = document.getElementById("btn");
+			result.innerHTML = msg;
+			btn.addEventListener("click", function(){
+				if (!isStarted){
+					isStarted = true;
+					this.innerHTML = "STOP";
+					startTime = Date.now();
+					result.innerHTML = msg;
+				} else {
+					isStarted = false;
+					this.innerHTML = "START";
+					diff = (Date.now() - startTime) / 1000 - 5;
+					if (diff >= -0.1 && diff <= 0.1) {
+						result.innerHTML = "Perfect!!";
+					} else if (diff > 0) {
+						result.innerHTML = "You are " + diff.toFixed(2) + " seconds late!";
+					} else {
+						result.innerHTML = "You are " + Math.abs(diff).toFixed(2) + " seconds fast!";
+					}
+				}
+			});
+			document.getElementById("btn").addEventListener("mousedown", function(){
+				this.className = "pushed";
+			});
+			document.getElementById("btn").addEventListener("mouseup", function(){
+				this.className = "";
+			});
+		})();
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
