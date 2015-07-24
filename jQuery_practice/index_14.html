@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習14</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<input type="text" id="name">
+	<select id="members" name="members">
+		<option>mojimoji</option>
+		<option>hogehoge</option>
+		<option>fugafuga</option>
+	</select>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// focus, blur 
+			// change
+			$("#name").focus(function(){
+				$(this).css("background", "pink");
+			})
+			$("#name").blur(function(){
+				$(this).css("background", "white");
+			});
+			$("#members").change(function(){
+				alert("changed!");
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
