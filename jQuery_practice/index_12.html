@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習12</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<div id="box" style="width:100px; height:100px;background:#f8a"></div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// エフェクトを使ってみよう
+			// hide, show シュッと消えたり出たり
+			// fadeOut, fadeIn　ふわっと消えたり出たり
+			// toggle　出てたら消える、消えてたら出る
+			// 第二引数にfunctionを入れる事で関数を取れる
+			$("#box").fadeOut(800, function() {
+				alert("gone!");
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
