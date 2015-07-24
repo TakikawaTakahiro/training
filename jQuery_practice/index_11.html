@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習11</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<ul>
+		<li>0</li>
+		<li>1</li>
+		<li>2</li>
+	</ul>
+	
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// before, after -> insertBefore, indertAfter 指定した前後に追加する
+			// prepend, append　-> prependTo, appendTo ある要素の子要素の先頭、末尾に追加する
+
+			var li = $("<li>").text("just added");
+			// $("ul > li:eq(1)").before(li); どっちも一緒
+			//li.insertBefore($("ul > li:eq(1)"));
+			//$("ul").append(li); これも一緒
+			li.appendTo($("ul"));
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
