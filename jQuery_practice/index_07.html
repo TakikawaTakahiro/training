@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習07</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<p><a href="http://google.co.jp">google</a></p>
+	<p><a href="http://yahoo.co.jp">yahoo</a></p>
+	<p><a href="http://dotinstall.com">Dotinstall</a></p>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// セレクタ、メソッドについて
+			// 属性セレクタ
+			// = イコール
+			// !=　イコールではない、それ以外
+			// *=　要素が含まれる
+			// ^=　で始まる
+			// $=　で終わる
+			$("a[href^='http']").css("background", "red")
+			
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
