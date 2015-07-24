@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習08</title>
+	<style type="text/css">
+		.mystyle {
+			border: 5px solid green;
+			font-size: 48px;
+		}
+	</style>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// セレクタ、メソッドについて
+			// .css　メソッドは値の設定だけではなく取得にも使える
+			//$("p").css("color", "red").css("background", "blue");
+			//console.log($("p").css("color"));
+
+			// addClass removeClass 設定したスタイルをつけたり外したり
+			$("p").addClass("mystyle");
+
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
