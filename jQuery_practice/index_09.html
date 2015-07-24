@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習09</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<a href="http://google.co.jp" data-sitename="google">google</a>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// attr アトリビュートメソッド htmlの属性の取得や変更
+			//console.log($("a").attr("href"));
+			//$("a").attr("href", "http://google.com");
+			// data カスタム属性の取得
+			console.log($("a").data("sitename"));
+
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
