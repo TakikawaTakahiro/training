@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習13</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<div id="box" style="width:100px; height:100px;background:#f8a"></div>
+	
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// イベントを使ってみよう
+			// click クリックした時
+			// mouseover, mouseout, mousemove
+			$("#box").click(function(){
+				alert("hallo");
+			});
+			$("#box")
+			.mouseover(function(){
+				$(this).css("background", "green");
+			})
+			.mouseout(function(){
+				$(this).css("background", "#f8a");
+			})
+			.mousemove(function(e){
+				$(this).text(e.pageX);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
