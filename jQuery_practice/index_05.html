@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習05</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<ul id="main">
+		<li>0</li>
+		<li class="item">1</li>
+		<li class="item">2</li>
+		<li>
+			3
+			<ul id="sub">
+				<li>3-0</li>
+				<li>3-1</li>
+				<li class="item">3-2</li>
+				<li class="item">3-3</li>
+				<li>3-4</li>
+			</ul>
+		</li>
+	</ul>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//$(document).ready(function(){ これは下記のように省略できる
+		$(function(){
+			// セレクタ、メソッドについて
+			// フィルタの種類
+			// :eq()　イコール
+			// :gt(), :lt()  **より大きい、小さい
+			// :even, :odd　偶数、奇数
+			// :contains()　コンテンツの中身に何があるかを指定
+			// :first, :last　最初、最後
+			// $("#sub > li:eq(2)").css("color", "red");
+			$("#sub > li:contains('0')").css("color", "red");
+
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
