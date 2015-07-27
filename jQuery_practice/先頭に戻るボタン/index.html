@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>スクロール実験</title>
+	<style type="text/css">
+	 body { text-align: center; }
+	</style>
+</head>
+<body>
+	<h1>スクロール実験</h1>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<p>hallo</p>
+	<div id="back-to-top" style="position:fixed; right:5px; bottom:5px;"><a href="#">TOPへ戻る</a></div>
+	<div id="pos" style="position:fixed; left:5px; bottom:5px;"></div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// backtotopを消す
+			$("#back-to-top").hide();
+			// スクロールが十分にされたらbacktotopを表示させ、スクロールが戻ったら非表示
+			$(window).scroll(function(){
+				$("#pos").text($(this).scrollTop());
+				if ($(this).scrollTop() > 100) {
+					$("#back-to-top").fadeIn();
+				} else {
+					$("#back-to-top").fadeOut();
+				}
+			});
+			// backtotopがクリックされたら上に戻る
+			$("#back-to-top a").click(function(){
+				$("body").animate({
+					scrollTop:0
+				}, 500);
+				return false;
+			});
+		});
+
+	</script>
+</body>
+</html>
