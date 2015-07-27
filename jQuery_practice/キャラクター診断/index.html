@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>キャラクター診断</title>
+	<style type="text/css">
+		body { text-align: center; }
+	</style>
+</head>
+<body>
+	<h1>キャラクター診断</h1>
+	<P><input type="text" id="name" value=""></P>
+	<P><input type="button" id="getResult" value="診断する！"></P>
+	<h2>診断結果</h2>
+	<p id="result">こちらに結果が表示されます。</p>
+	<div id="tweet"></div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#getResult").click(function() {
+				// 名前を取得
+				var name = $("#name").val();
+				// エラー処理
+				if (name === "") {
+					alert("名前を入力してください！");
+					return;
+				}
+				// キャラクターの生成
+				var characters = ["ふつうな", "ぬけめがない", "ロマンチストな", "くろうにんの", "がんばりやな", "でんこうせっかの", "きれものの", "しあわせものの", "すばしっこい", "ちからじまんの", "せけんしらずな"];
+				// 0 ~ n　の乱数を生成
+				var character = characters[Math.floor(Math.random() * characters.length)];
+				// タイプの生成
+				var types = ["勇者", "魔法使い", "戦士", "僧侶", "遊び人", "商人", "武闘家"];
+				// 0 ~ n　の乱数を生成
+				var type = types[Math.floor(Math.random() * types.length)];
+				// 結果を表示
+				var result = name + "さんは、「"　+ character + type + "」タイプです！";
+				$("#result").text(result);
+				//　ツイッターリンク
+				var tweetLink = "<a href='https://twitter.com/intent/tweet?text=" + encodeURIComponent(result) + "&hashtags=DQshindan' target='_blank'>ツイートする</a>";
+				$("#tweet").html(tweetLink);
+			});
+		});
+	</script>
+</body>
+</html>
