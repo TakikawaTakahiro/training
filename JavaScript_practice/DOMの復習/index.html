@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>DOMの復習</title>
+	<style type="text/css">
+		.mystyle {
+			font-weight: bold;
+			border: 1px solid gray;
+		}
+	</style>
+</head>
+<body>
+	<h1>見出し</h1>
+	<p id="msg">こんちわ！</p>
+	<button id="add">Click!</button>
+	<div id="BacktoTop" style="position:fixed; right:5px; bottom:5px;"><a href="#">TOPへ戻る</a></div>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		// ドットインストールの内容
+		var e = document.getElementById('msg');
+		e.textContent = 'hallo!';
+		e.style.color = 'red';
+		e.className = 'mystyle';
+		document.getElementById('add').addEventListener('click', function(){
+			var greet = document.createElement('p'),
+				text = document.createTextNode('hallo world');
+			document.body.appendChild(greet).appendChild(text);
+		});
+
+		//あんまり関係ないけどトップに戻るボタン
+		$(function(){
+			$("#BacktoTop").hide();
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 100) {
+					$("#BacktoTop").fadeIn();
+				} else {
+					$("#BacktoTop").fadeOut();
+				}
+			});
+			$("#BacktoTop a").click(function(){
+				$("body").animate({
+					scrollTop:0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>
